@@ -1,0 +1,140 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans CJK KR',sans-serif;background:#111}
+:root{--felt:#0F6B4A;--felt2:#138A5F;--cream:#F1EADF;--ink:#1B2027;--red:#D33B3B;--gold:#E3A934;--line:#DDD2C0;--sub:#6B6357}
+.s{width:1080px;height:1350px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px 60px 210px;
+ background:radial-gradient(ellipse at 50% 38%,#17905F 0%,#0F6B4A 55%,#0A4F36 100%)}
+.s::before{content:"";position:absolute;inset:26px;border:3px solid rgba(241,234,223,.18);border-radius:40px;pointer-events:none}
+.pg{position:absolute;top:44px;right:58px;color:rgba(241,234,223,.75);font-size:30px;font-weight:700;letter-spacing:2px}
+.lesson{position:absolute;top:44px;left:58px;color:var(--gold);font-size:30px;font-weight:900;letter-spacing:4px}
+.note{width:100%;background:var(--cream);border-radius:28px;box-shadow:0 14px 0 rgba(0,0,0,.18);position:relative;padding:58px 56px 54px;
+ background-image:repeating-linear-gradient(transparent 0 63px,rgba(27,32,39,.05) 63px 65px)}
+.tab{position:absolute;top:-30px;left:50px;background:var(--ink);color:var(--cream);font-size:30px;font-weight:900;padding:12px 28px;border-radius:16px;letter-spacing:2px}
+.tab b{color:var(--gold)}
+.c{text-align:center}
+.ink{color:var(--ink)}
+.h1{font-size:150px;font-weight:900;letter-spacing:-5px;line-height:1.05;color:var(--ink)}
+.h2{font-size:66px;font-weight:900;letter-spacing:-2px;color:var(--ink);line-height:1.2}
+.kick{font-size:46px;font-weight:900;color:var(--red);letter-spacing:-1px}
+.bar{margin:34px auto 0;display:inline-block;background:var(--ink);color:var(--cream);font-size:54px;font-weight:900;padding:18px 40px;border-radius:20px;letter-spacing:-1px}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:40px}
+.tag{font-size:36px;font-weight:700;color:var(--ink);border:4px solid var(--ink);padding:10px 26px;border-radius:50px}
+.cap{margin-top:44px;text-align:center}
+.hl{display:inline;background:var(--cream);color:var(--ink);font-weight:900;font-size:48px;padding:3px 12px;box-decoration-break:clone;-webkit-box-decoration-break:clone;line-height:1.6}
+.hl.r{color:var(--red)}
+.ttl{align-self:flex-start;margin-bottom:50px}
+.ttl .hl{font-size:60px}
+table{width:100%;border-collapse:collapse;font-size:54px;color:var(--ink)}
+th{font-size:36px;color:var(--sub);font-weight:700;padding:0 0 14px}
+td{padding:24px 10px;font-weight:700;border-top:3px solid var(--line);text-align:center}
+td:first-child{font-weight:900;width:110px}
+td:first-child span{display:inline-block;width:76px;height:76px;line-height:76px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:42px}
+.up{color:#138A5F}.dn{color:var(--red)}
+.foot{font-size:38px;color:var(--sub);margin-top:24px;line-height:1.5;text-align:center;font-weight:500}
+.foot b{color:var(--ink)}
+.vs{display:flex;gap:24px;margin-top:30px}
+.vs>div{flex:1;border:4px solid var(--line);background:#fff8ee;border-radius:24px;padding:38px 10px;text-align:center}
+.vs .lb{font-size:40px;color:var(--sub);font-weight:700}
+.vs .n{font-size:96px;font-weight:900;letter-spacing:-3px;margin-top:4px}
+.vs .s2{font-size:34px;color:var(--sub)}
+.pts{list-style:none;counter-reset:p}
+.pts li{counter-increment:p;display:flex;gap:28px;align-items:flex-start;font-size:52px;font-weight:900;color:var(--ink);letter-spacing:-1px;line-height:1.3;padding:30px 0;border-top:3px solid var(--line)}
+.pts li:first-child{border-top:0;padding-top:6px}
+.pts li::before{content:counter(p);flex:0 0 76px;height:76px;border-radius:50%;background:var(--red);color:var(--cream);font-size:44px;display:flex;align-items:center;justify-content:center}
+.pts small{display:block;font-size:36px;color:var(--sub);font-weight:500;margin-top:8px;letter-spacing:0}
+.ans{display:flex;gap:24px;margin-top:40px}
+.ans div{flex:1;text-align:center;font-size:64px;font-weight:900;padding:26px 0;border-radius:24px;border:5px solid var(--ink);color:var(--ink)}
+.cta{margin-top:46px;background:var(--ink);border-radius:26px;padding:30px 36px;display:flex;align-items:center;gap:30px;width:100%}
+.cta .t{color:var(--cream);font-size:38px;font-weight:700;line-height:1.4}
+.cta .t b{color:var(--gold);font-size:46px}
+.logo{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);width:165px}
+</style></head><body>
+
+<!-- 1 표지 -->
+<div class="s"><div class="pg">1 / 6</div>
+ <div class="note c"><div class="tab"><b>홀덤 꿀팁 #02</b> · 토너먼트</div>
+  <div class="kick">바이인만 보고 고르면 손해!</div>
+  <div class="h1" style="margin-top:14px;font-size:136px">포스터 읽는 법</div>
+  <div class="bar">블라인드 구조와 듀레이션</div>
+  <div class="tags"><div class="tag">#시작스택</div><div class="tag">#블라인드</div><div class="tag">#레벨</div><div class="tag">#듀레이션</div></div>
+ </div>
+ <div class="cap"><span class="hl">대회 고르기 전에 볼 숫자 3개</span></div>
+ <img class="logo" src="../assets/dongtube_logo.png">
+</div>
+
+<!-- 2 상황 -->
+<div class="s"><div class="lesson">홀덤 꿀팁 #02</div><div class="pg">2 / 6</div>
+ <div class="ttl"><span class="hl">상황 · 바이인 같은 두 대회</span></div>
+ <div class="note">
+  <table>
+   <tr><th></th><th>시작 칩</th><th>시작 블라인드</th><th>레벨</th></tr>
+   <tr><td><span>A</span></td><td>20,000</td><td>100/200</td><td>15분</td></tr>
+   <tr><td><span>B</span></td><td>30,000</td><td>300/600</td><td>10분</td></tr>
+  </table>
+  <div class="foot">블라인드는 <b>같은 순서로</b> 오르고, 바이인도 같다</div>
+ </div>
+ <div class="cap"><span class="hl">칩을 더 주는 B가 더 좋은 대회일까?</span><br><span class="hl r">👉 아닙니다.</span></div>
+ <img class="logo" src="../assets/dongtube_logo.png">
+</div>
+
+<!-- 3 개념 -->
+<div class="s"><div class="lesson">홀덤 꿀팁 #02</div><div class="pg">3 / 6</div>
+ <div class="ttl"><span class="hl">개념 · 칩은 BB로 재야 한다</span></div>
+ <div class="note">
+  <table>
+   <tr><th></th><th>계산</th><th>진짜 크기</th></tr>
+   <tr><td><span>A</span></td><td>20,000 ÷ 200</td><td class="up">100BB</td></tr>
+   <tr><td><span>B</span></td><td>30,000 ÷ 600</td><td class="dn">50BB</td></tr>
+  </table>
+  <div class="foot">칩 숫자는 대회마다 단위가 다를 뿐,<br><b>B는 칩이 많아 보여도 절반 깊이입니다.</b></div>
+ </div>
+ <div class="cap"><span class="hl">시작 칩 ÷ 시작 빅블라인드 = 진짜 크기</span></div>
+ <img class="logo" src="../assets/dongtube_logo.png">
+</div>
+
+<!-- 4 실전 -->
+<div class="s"><div class="lesson">홀덤 꿀팁 #02</div><div class="pg">4 / 6</div>
+ <div class="ttl"><span class="hl">실전 · 못 이기면 언제 급해질까?</span></div>
+ <div class="note">
+  <div class="foot" style="margin-top:0">시작 칩 그대로 <b>10BB</b>(올인 or 폴드 구간)가 될 때까지</div>
+  <div class="vs">
+   <div><div class="lb">A 대회</div><div class="n up">120분</div><div class="s2">15분 × 8레벨</div></div>
+   <div><div class="lb">B 대회</div><div class="n dn">70분</div><div class="s2">10분 × 7레벨</div></div>
+  </div>
+  <div class="foot" style="margin-top:34px">A는 2시간 동안 <b>골라서 칠 여유</b>가 있고,<br>B는 1시간 남짓이면 <b style="color:var(--red)">올인 승부</b>로 몰립니다.</div>
+ </div>
+ <div class="cap"><span class="hl">바이인이 같다면 → 깊고 느린 쪽으로</span></div>
+ <img class="logo" src="../assets/dongtube_logo.png">
+</div>
+
+<!-- 5 핵심 -->
+<div class="s"><div class="lesson">홀덤 꿀팁 #02</div><div class="pg">5 / 6</div>
+ <div class="ttl"><span class="hl">오늘의 핵심 📌</span></div>
+ <div class="note">
+  <ol class="pts">
+   <li><div>시작 칩 말고 BB로 비교<small>시작 칩 ÷ 시작 빅블라인드</small></div></li>
+   <li><div>레벨 시간이 곧 대회 속도<small>짧을수록 운의 비중이 커진다</small></div></li>
+   <li><div>10BB까지 몇 분인지 미리 계산<small>레벨 시간 × 남은 레벨 수</small></div></li>
+  </ol>
+ </div>
+ <div class="cap"><span class="hl">저장해두고 대회 고를 때 다시 보기</span></div>
+ <img class="logo" src="../assets/dongtube_logo.png">
+</div>
+
+<!-- 6 퀴즈 -->
+<div class="s"><div class="lesson">홀덤 꿀팁 #02</div><div class="pg">6 / 6</div>
+ <div class="ttl" style="margin-bottom:40px"><span class="hl r">QUIZ</span> <span class="hl">레벨 시간이 같다면</span></div>
+ <div class="note c">
+  <div class="h2">시작 스택이 더 깊은 대회는?</div>
+  <div class="ans">
+   <div style="padding:20px 0">①<span style="display:block;font-size:40px;margin-top:4px">40,000 칩</span><span style="display:block;font-size:34px;color:var(--sub)">블라인드 200/400</span></div>
+   <div style="padding:20px 0">②<span style="display:block;font-size:40px;margin-top:4px">60,000 칩</span><span style="display:block;font-size:34px;color:var(--sub)">블라인드 500/1,000</span></div>
+  </div>
+  <div class="foot" style="margin-top:28px">정답은 <b>내일 스토리</b>에서 공개!</div>
+ </div>
+ <div class="cta">
+  <div class="t">파이널 테이블 올인 계산은<br><b>플레이스토어 ‘ICM Now’</b></div>
+ </div>
+ <img class="logo" src="../assets/dongtube_logo.png">
+</div>
+</body></html>
